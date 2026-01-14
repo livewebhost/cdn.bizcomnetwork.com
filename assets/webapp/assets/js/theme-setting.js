@@ -6,19 +6,19 @@
     $('#darkButton').change(function () {
         if ($(this).is(":checked")) {
             $('body').addClass('dark');
-            $("#change-link").attr("href", "https://m.bizcomnetwork.com/assets/webapp/assets/css/dark.css");
+            $("#change-link").attr("href", "https://cdn.bizcomnetwork.com/assets/webapp/assets/css/dark.css");
             localStorage.setItem('body', 'dark');
-            localStorage.setItem('layoutcss', 'https://m.bizcomnetwork.com/assets/webapp/assets/css/dark.css');
+            localStorage.setItem('layoutcss', 'https://cdn.bizcomnetwork.com/assets/webapp/assets/css/dark.css');
         } else {
             $('body').removeClass('dark');
-            $("#change-link").attr("href", "https://m.bizcomnetwork.com/assets/webapp/assets/css/style.css");
+            $("#change-link").attr("href", "https://cdn.bizcomnetwork.com/assets/webapp/assets/css/style.css");
             localStorage.setItem('body', '');
-            localStorage.setItem('layoutcss', 'https://m.bizcomnetwork.com/assets/webapp/assets/css/style.css');
+            localStorage.setItem('layoutcss', 'https://cdn.bizcomnetwork.com/assets/webapp/assets/css/style.css');
         }
     });
 
     $("body").attr("class", localStorage.getItem('body'));
-    $("#change-link").attr("href", localStorage.getItem('layoutcss') ? localStorage.getItem('layoutcss') : 'https://m.bizcomnetwork.com/assets/webapp/assets/css/style.css');
+    $("#change-link").attr("href", localStorage.getItem('layoutcss') ? localStorage.getItem('layoutcss') : 'https://cdn.bizcomnetwork.com/assets/webapp/assets/css/style.css');
     localStorage.getItem('body') ? $('#darkButton').attr('checked', true) : '';
 
 
@@ -28,17 +28,17 @@
     $('#rtlButton').change(function () {
         if ($(this).is(":checked")) {
             $("html").attr("dir", "rtl");
-            $("#rtl-link").attr("href", "https://m.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.rtl.css");
-            localStorage.setItem('rtlcss', 'https://m.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.rtl.css');
+            $("#rtl-link").attr("href", "https://cdn.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.rtl.css");
+            localStorage.setItem('rtlcss', 'https://cdn.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.rtl.css');
             localStorage.setItem('dir', 'rtl');
         } else {
             $("html").attr("dir", '');
             localStorage.setItem('dir', '');
-            $("#rtl-link").attr("href", "https://m.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.css");
-            localStorage.setItem('rtlcss', 'https://m.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.css');
+            $("#rtl-link").attr("href", "https://cdn.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.css");
+            localStorage.setItem('rtlcss', 'https://cdn.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.css');
         }
     });
     $("html").attr("dir", localStorage.getItem('dir'));
-    $("#rtl-link").attr("href", localStorage.getItem('rtlcss') ? localStorage.getItem('rtlcss') : 'https://m.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.css');
+    $("#rtl-link").attr("href", localStorage.getItem('rtlcss') ? localStorage.getItem('rtlcss') : 'https://cdn.bizcomnetwork.com/assets/webapp/assets/css/vendors/bootstrap.css');
     localStorage.getItem('dir') ? $('#rtlButton').attr('checked', true) : '';
 })(jQuery);
